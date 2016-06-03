@@ -4,8 +4,9 @@ var tank1 = [100, "tank1"],
     healer = [100, "healer"],
     scout = [100, "scout"],
     fighter =[100, "fighter"],
-    events = [];
-    timerWind1 = null;
+    events = [],
+    timerWind1 = null,
+    timerHeal = null;
 
 function testShit() {
     console.log(tank1);
@@ -14,7 +15,7 @@ function testShit() {
 }
 
 
-/*function damage wind force 1, now scalable AND practical :)*/
+/*function damage*/
 function startWind1(hordeux) {
     if (timerWind1 == null) {
         timerWind1 = setInterval(wind1, 1000);
@@ -38,12 +39,22 @@ function stopWind1() {
     clearInterval(timerWind1);
 }
 
-/*function heal, may not be scalable as well*/
+/*function heal*/
 function heal(hordeux) {
-    timerHeal = setInterval(heal, 1500);
-    function heal() {
-        hordeux[0]++;
-        console.log(hordeux[0]);
+    if (timerHeal == null) {
+        timerHeal = setInterval(heal, 1500);
+        function heal() {
+            hordeux[0]++;
+            console.log(hordeux[0]);
+        }
+    }
+    else {
+        stopHeal();
+        timerHeal = setInterval(heal, 1500);
+        function heal() {
+            hordeux[0]++;
+            console.log(hordeux[0]);
+        }
     }
 }
 /*stop heal*/
