@@ -1,23 +1,21 @@
-var tank1 = [100, "tank1"],
-    tank2 = [100, "tank2"],
-    tank3 = [100, "tank3"],
-    healer = [100, "healer"],
-    scout = [100, "scout"],
-    fighter =[100, "fighter"];
-
-
-function stop() {
-    clearInterval(timer);
+function init(){
+  nombre= 1;
+tb = [];
 }
-
-function start(hordeux){
-    timer = setInterval(wind, 1000);
-
-    function wind() {
-    hordeux[0]--;
-    console.log(hordeux[0]);
-    }
+function change(id){
+  document.getElementById("carrer_"+id).style.border ="1px solid orange";
+  nombre++;
+  if (nombre%2 === 0) {
+    var test = document.getElementById("carrer_"+id).id ;
+    tb.push(test);
+  }else {
+    document.getElementById(tb).style.border ="1px solid black";
+    document.getElementById(tb).classList.remove(tb);
+    document.getElementById(tb).classList.add("carrer_"+id);
+    document.getElementById("carrer_"+id).classList.remove("carrer_"+id);
+    document.getElementById("carrer_"+id).classList.add(tb);
+    setTimeout(function () {
+      tb = [];
+    }, 10);
+  }
 }
-
-
-
