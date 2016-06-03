@@ -21,7 +21,6 @@ function startWind1(hordeux) {
         timerWind1 = setInterval(wind1, 1000);
         function wind1() {
             hordeux[0]--;
-            console.log(hordeux[0]);
         }
     }
     else {
@@ -29,10 +28,8 @@ function startWind1(hordeux) {
         timerWind1 = setInterval(wind1, 1000);
         function wind1() {
             hordeux[0]--;
-            console.log(hordeux[0]);
         }
     }
-    
 }
 /*stops damage*/
 function stopWind1() {
@@ -45,7 +42,6 @@ function heal(hordeux) {
         timerHeal = setInterval(heal, 1500);
         function heal() {
             hordeux[0]++;
-            console.log(hordeux[0]);
         }
     }
     else {
@@ -53,7 +49,6 @@ function heal(hordeux) {
         timerHeal = setInterval(heal, 1500);
         function heal() {
             hordeux[0]++;
-            console.log(hordeux[0]);
         }
     }
 }
