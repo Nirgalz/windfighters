@@ -5,17 +5,33 @@ var tank1 = [100, "tank1"],
     scout = [100, "scout"],
     fighter =[100, "fighter"],
     events = [];
+    timerWind1 = null;
+
+function testShit() {
+    console.log(tank1);
+    console.log(tank2);
+    console.log(timerWind1);
+}
 
 
-
-
-/*funcation damage wind force 1, may not be scalable*/
+/*function damage wind force 1, now scalable AND practical :)*/
 function startWind1(hordeux) {
-    timerWind1 = setInterval(wind1, 1000);
-    function wind1() {
-    hordeux[0]--;
-    console.log(hordeux[0]);
+    if (timerWind1 == null) {
+        timerWind1 = setInterval(wind1, 1000);
+        function wind1() {
+            hordeux[0]--;
+            console.log(hordeux[0]);
+        }
     }
+    else {
+        stopWind1();
+        timerWind1 = setInterval(wind1, 1000);
+        function wind1() {
+            hordeux[0]--;
+            console.log(hordeux[0]);
+        }
+    }
+    
 }
 /*stops damage*/
 function stopWind1() {
