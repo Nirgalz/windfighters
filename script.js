@@ -1,27 +1,21 @@
-var tank1 = [10],
+var tank1 = [100],
     tank2 = [100,],
     tank3 = [100,],
     healer = [100,],
     scout = [100,],
     fighter =[100,];
 
-function couille(){
-    var timer = setInterval(wind, 1000);
+
+function stop() {
+    clearInterval(timer);
+}
+
+function start(){
+    timer = setInterval(wind, 1000);
 }
 
 
 function wind() {
-    var d = new Date();
-    console.log(d.toLocaleTimeString);
+    tank1[0]--;
+    console.log(tank1[0]);
 }
-
-
-
-/*function wind1(horder){
-    console.log(horder[0]);
-    for (horder[0]; horder[0] >= 0; horder[0]66) {
-    
-            console.log(horder);
-    
-    }
-}*/
