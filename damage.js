@@ -6,13 +6,12 @@ var tank1 = [100, "tank1"],
     fighter =[100, "fighter"],
     events = [],
     timerWind1 = null,
-    timerHeal = null;
-    wind = [1000, 500, 200]
+    timerHeal = null,
+    wind = [1000, 500, 200];
 
 function testShit() {
     console.log(tank1);
     console.log(tank2);
-    console.log(timerWind1);
 }
 
 
@@ -24,6 +23,7 @@ function startWind1(hordeux, wind) {
         timerWind1 = setInterval(wind1, wind);
         function wind1() {
             hordeux[0]--;
+            console.log('damage ' +hordeux[0]);
         }
     }
     else {
@@ -31,9 +31,9 @@ function startWind1(hordeux, wind) {
         timerWind1 = setInterval(wind1, wind);
         function wind1() {
             hordeux[0]--;
+            console.log('damage2 ' + hordeux[0]);
         }
     }
-
 }
 /*stops damage*/
 function stopWind1() {
@@ -42,19 +42,19 @@ function stopWind1() {
 
 /*function heal*/
 function heal(hordeux) {
-    if (timerHeal == null && hordeux[0] < 100) {
+    if (timerHeal == null) {
         timerHeal = setInterval(heal, 700);
         function heal() {
             hordeux[0]++;
-            console.log(hordeux[0]);
+            console.log('heal ' + hordeux[0]);
         }
     }
-    else if (hordeux[0] < 100) {
+    else {
         stopHeal();
         timerHeal = setInterval(heal, 700);
         function heal() {
             hordeux[0]++;
-            console.log(hordeux[0]);
+            console.log('heal2 ' + hordeux[0]);
         }
     }
 }
