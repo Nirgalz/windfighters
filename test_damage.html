@@ -11,7 +11,38 @@
 <button onclick="heal(tank2)">heal tank2</button>
 <button onclick="stop()">stop</button>
 <button onclick="testShit()">tesShit</button>
+<div class="tank" id="t1">
+	<div class="tankHPbar" id="tank1">
+		<div class="HPdigit" id="HPtank1">100</div>
+	</div>
+</div>
+<br>
+<div class="tank" id="t2">
+	<div class="tankHPbar" id="tank2">
+		<div class="HPdigit" id="HPtank2">100</div>
+	</div>
+</div>
 
 <script src="damage.js"></script>
+<style>
+	.tank {
+		position: relative;
+		width: 30%;
+		height: 20px;
+		background-color: grey;
+	}
+	.tankHPbar {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: red;
+	}
+
+	.HPdigit {
+		text-align: center;
+		line-height: 20px;
+		color: white;
+	}
+</style>
 </body>
 </html>
