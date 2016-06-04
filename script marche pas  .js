@@ -3,7 +3,7 @@ tb = [];
 }
 function change(id){
   document.getElementById("carrer_"+id).style.border ="1px solid orange";
-  if (tb[0] === 0) {
+  if (tb.lenght === 0) {
     var test = document.getElementById("carrer_"+id).id ;
     tb.push(test);
   }else {
