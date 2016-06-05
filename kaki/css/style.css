@@ -1,21 +1,19 @@
 .board {
-    width: 900px;
+    width: 81%;
 }
 .next {
-    width: 300px;
-    height: 50px;
+    height: 7vh;
 }
 .case {
-    width: 300px;
-    height: 100px;
+    width: 27%;
+    height: 15vh;
     border: 1px solid black;
     text-align: center;
     background-color: cornsilk;
 }
 
 .view, .wind {
-    width: 300px;
-    height: 50px;
+    height: 7vh;
     border: 1px solid black;
     text-align: center;
 }
@@ -42,44 +40,44 @@ left: 0px;
 }
 
 #drag2 {
-    left: 60px;
+    left: 4%;
 }
 
 #drag3 {
-    left: 120px;
+    left: 8%;
 }
 
 #drag4 {
-    left: 180px;
+    left: 12%;
 }
 
 #drag5 {
-    left: 240px;
+    left: 16%;
 }
 
 #drag6 {
-    left: 300px;
+    left: 20%;
 }
 
 #drag7 {
-    left: 360px;
+    left: 24%;
 }
 
 #drag8 {
-    left: 420px;
+    left: 28%;
 }
 
 #drag9 {
-    left: 480px;
+    left: 32%;
 }
 #drag10 {
-    left: 540px;
+    left: 36%;
 }
 #drag11 {
-    left: 600px;
+    left: 40%;
 }
 #drag12 {
-    left: 660px;
+    left: 44%;
 }
 
 .skin {
