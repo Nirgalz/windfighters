@@ -7,19 +7,12 @@ var tank1 = [100, "tank1"],
     events = [],
     timerWind1 = null,
     timerHeal = null,
-    wind = [1000, 500, 200];
-
-function testShit() {
-    console.log(tank1);
-    console.log(tank2);
-}
-
+    wind = [1000, 500, 200],
+    randomWind = [];
 
 /*function damage*/
 function startWind1(hordeux, wind) {
-
     if (timerWind1 == null) {
-        console.log(wind);
         timerWind1 = setInterval(wind1, wind);
         function wind1() {
             hordeux[0]--;
@@ -29,7 +22,6 @@ function startWind1(hordeux, wind) {
                 /*TODO function death*/
             }
             HP(hordeux);
-            console.log('damage ' +hordeux[0]);
         }
     }
     else {
@@ -43,7 +35,6 @@ function startWind1(hordeux, wind) {
                 /*TODO function death*/
             }
             HP(hordeux);
-            console.log('damage2 ' + hordeux[0]);
         }
     }
 }
@@ -62,7 +53,6 @@ function heal(hordeux) {
                 hordeux[0] = 100;
             }
             HP(hordeux);
-            console.log('heal ' + hordeux[0]);
         }
     }
     else {
@@ -74,7 +64,6 @@ function heal(hordeux) {
                 hordeux[0] = 100;
             }
             HP(hordeux);
-            console.log('heal2 ' + hordeux[0]);
         }
     }
 }
@@ -83,8 +72,21 @@ function stopHeal() {
     clearInterval(timerHeal);
 }
 
-
+/*shows health*/
 function HP(a) {
     document.getElementById(a[1]).style.width = a[0] + '%';
     document.getElementById('HP'+a[1]).innerHTML = a[0];
+}
+
+/*randomize winds, TODO : add events and attacks*/
+function section() {
+    randomWind = [];
+    randomWinds();
+    randomWinds();
+    randomWinds();
+}
+
+function randomWinds() {
+    var winds = Math.floor((Math.random() * wind.length));
+    randomWind.push(wind[winds]);
 }
